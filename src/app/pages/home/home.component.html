@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let user of usersPrevious">
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.email}}</td>
+            <td><button mat-raised-button color="primary" (click)="deleteUser(user.id)">Delete</button><button mat-raised-button color="primary" (click)="editUser()">Edit</button></td>
+        </tr>
+    </tbody>
+</table>

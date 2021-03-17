@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Editar Usuário</h1>
+<div mat-dialog-content>
+    <form class="example-form" [formGroup]="editUserForm">
+        <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput formControlName="id" name="id">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="first_name" name="first_name">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Trabalho</mat-label>
+            <input matInput formControlName="job" name="job">
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onNoClick()">Cancelar</button>
+    <button mat-raised-button color="primary" (click)="editUser()">Adicionar</button>
+</div>
